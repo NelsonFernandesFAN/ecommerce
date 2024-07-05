@@ -1,5 +1,4 @@
 import {defineField, defineType} from 'sanity'
-//import ProductSelector from '../components/ProductSelector'
 import {MasterDetailIcon} from '@sanity/icons'
 
 export default defineType({
@@ -15,34 +14,9 @@ export default defineType({
 
   fields: [
     defineField({
-      name: 'sliders',
-      title: 'Main Content',
-      type: 'sliderContent',
-    }),
-    defineField({
       name: 'productName',
       title: 'Product Name',
       type: 'string',
-    }),
-    defineField({
-      title: 'Image',
-      name: 'productImage',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: 'caption',
-          type: 'string',
-          title: 'Caption',
-        },
-        {
-          name: 'attribution',
-          type: 'string',
-          title: 'Attribution',
-        },
-      ],
     }),
     defineField({
       name: 'productId',
@@ -65,10 +39,16 @@ export default defineType({
       type: 'number',
     }),
     defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'category'}]}],
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'string',
-      group: ['SEO'],
+      group: ['seo'],
     }),
   ],
 })

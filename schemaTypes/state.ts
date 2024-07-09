@@ -17,9 +17,9 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'sliders',
+      name: 'widgets',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'sliderContent'}}],
+      of: [{type: 'reference', to: {type: 'stateWidgets'}}],
     }),
   ],
 })

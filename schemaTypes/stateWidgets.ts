@@ -3,7 +3,7 @@ import EnvironmentRadioInput from '../components/environment-radio-input/environ
 
 export default defineType({
   name: 'stateWidgets',
-  title: 'Widget Title',
+  title: 'Lobby Content',
   type: 'document',
   fields: [
     defineField({
@@ -21,8 +21,6 @@ export default defineType({
           {title: 'Staging', value: 'stage'},
           {title: 'Production', value: 'prod'},
         ],
-        direction: 'horizontal',
-        layout: 'radio',
       },
       components: {
         input: EnvironmentRadioInput,
@@ -30,9 +28,9 @@ export default defineType({
       initialValue: 'dev',
     }),
     defineField({
-      name: 'sliders',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'sliderContent'}}],
+      name: 'widget',
+      type: 'reference',
+      to: {type: 'widget'},
     }),
   ],
 })

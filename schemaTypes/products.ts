@@ -15,11 +15,6 @@ export default defineType({
 
   fields: [
     defineField({
-      name: 'sliders',
-      title: 'Main Content',
-      type: 'sliderContent',
-    }),
-    defineField({
       name: 'productName',
       title: 'Product Name',
       type: 'string',

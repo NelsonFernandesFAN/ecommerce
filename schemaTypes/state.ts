@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import WidgetsInput from '../components/widgets-input/widgets-input'
 
 export default defineType({
   name: 'state',
@@ -17,9 +18,12 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'widgets',
+      name: 'lobby',
       type: 'array',
       of: [{type: 'reference', to: {type: 'stateWidgets'}}],
+      components: {
+        input: WidgetsInput,
+      },
     }),
   ],
 })

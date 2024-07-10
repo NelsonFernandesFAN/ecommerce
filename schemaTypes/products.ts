@@ -43,7 +43,7 @@ export default defineType({
       name: 'productId',
       title: 'Product Id',
       type: 'string',
-      hidden: true,
+      hidden: false, // provided by IGT
     }),
     defineField({
       name: 'slug',

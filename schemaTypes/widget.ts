@@ -4,7 +4,7 @@ export enum ComponentType {
   SHOWCASE_CARD = 'showcase-card',
   AGGREGATE_CARD = 'aggregate-card',
   CAROUSEL = 'carousel',
-  ADD_FUNDS = 'add-funds',
+  ACCOUNT_BALANCE = 'account-balance',
 }
 
 export default defineType({

@@ -29,14 +29,14 @@ export default defineType({
       name: 'product',
       title: 'Select product',
       type: 'reference',
-      to: {type: 'products'},
+      to: {type: 'games'},
       hidden: ({parent}) => parent?.widget_type !== ComponentType.SHOWCASE_CARD,
     }),
     defineField({
       name: 'products',
       title: 'Select products',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'products'}}],
+      of: [{type: 'reference', to: {type: 'games'}}],
       hidden: ({parent}) =>
         parent?.widget_type !== ComponentType.CAROUSEL &&
         parent?.widget_type !== ComponentType.AGGREGATE_CARD,

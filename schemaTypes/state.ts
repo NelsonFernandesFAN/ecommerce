@@ -20,7 +20,7 @@ export default defineType({
     defineField({
       name: 'lobby',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'stateWidgets'}}],
+      of: [{type: 'stateWidgets'}],
       components: {
         input: WidgetsInput,
       },

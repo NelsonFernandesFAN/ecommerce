@@ -3,14 +3,9 @@ import EnvironmentRadioInput from '../components/environment-radio-input/environ
 
 export default defineType({
   name: 'stateWidgets',
-  title: 'Lobby Content',
-  type: 'document',
+  title: 'Enviroment for widgets',
+  type: 'object',
   fields: [
-    defineField({
-      name: 'widget_field_name',
-      title: 'Title',
-      type: 'string',
-    }),
     defineField({
       name: 'widget_env',
       title: 'Environment',

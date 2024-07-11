@@ -3,7 +3,7 @@ import EnvironmentRadioInput from '../components/environment-radio-input/environ
 
 export default defineType({
   name: 'stateWidgets',
-  title: 'Enviroment for widgets',
+  title: 'Environment for widgets',
   type: 'object',
   fields: [
     defineField({
@@ -28,4 +28,16 @@ export default defineType({
       to: {type: 'widget'},
     }),
   ],
+  preview: {
+    select: {
+      title: 'widget.widget_title',
+      env: 'widget_env',
+    },
+    prepare(selection) {
+      const {title, env} = selection
+      return {
+        title: `${title} (${env})`,
+      }
+    },
+  },
 })

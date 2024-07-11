@@ -26,15 +26,15 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'product',
-      title: 'Select product',
+      name: 'game',
+      title: 'Select game',
       type: 'reference',
       to: {type: 'games'},
       hidden: ({parent}) => parent?.widget_type !== ComponentType.SHOWCASE_CARD,
     }),
     defineField({
-      name: 'products',
-      title: 'Select products',
+      name: 'games',
+      title: 'Select games',
       type: 'array',
       of: [{type: 'reference', to: {type: 'games'}}],
       hidden: ({parent}) =>

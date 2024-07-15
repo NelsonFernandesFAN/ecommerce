@@ -1,6 +1,6 @@
 import {defineField, defineType} from 'sanity'
 //import ProductSelector from '../components/ProductSelector'
-import {MasterDetailIcon} from '@sanity/icons'
+import {JoystickIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'games',
@@ -11,7 +11,7 @@ export default defineType({
       name: 'SEO',
     },
   ],
-  icon: MasterDetailIcon,
+  icon: JoystickIcon,
 
   fields: [
     defineField({
@@ -44,11 +44,14 @@ export default defineType({
       name: 'game_price',
       title: 'Price',
       type: 'number',
+      readOnly: true,
     }),
+
     defineField({
       name: 'game_prize',
       title: 'Prize',
       type: 'number',
+      readOnly: true,
     }),
     defineField({
       name: 'game_description',

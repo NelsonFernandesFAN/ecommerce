@@ -1,11 +1,12 @@
 import {defineField, defineType} from 'sanity'
 import WidgetsInput from '../components/widgets-input/widgets-input'
+import {EarthAmericasIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'state',
   title: 'States',
   type: 'document',
-
+  icon: EarthAmericasIcon,
   fields: [
     defineField({
       name: 'state_name',
@@ -26,4 +27,17 @@ export default defineType({
       },
     }),
   ],
+  preview: {
+    select: {
+      title: 'state_name',
+      subtitle: 'state_code',
+    },
+    prepare({title, subtitle}) {
+      return {
+        title,
+        subtitle,
+        media: null,
+      }
+    },
+  },
 })

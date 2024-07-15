@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {ProjectsIcon} from '@sanity/icons'
 
 export enum ComponentType {
   SHOWCASE_CARD = 'showcase-card',
@@ -11,6 +12,7 @@ export default defineType({
   name: 'widget',
   title: 'Widgets',
   type: 'document',
+  icon: ProjectsIcon,
   fields: [
     defineField({
       name: 'widget_title',
@@ -33,10 +35,9 @@ export default defineType({
       hidden: ({parent}) => parent?.widget_type !== ComponentType.SHOWCASE_CARD,
     }),
     defineField({
-      name: 'games',
-      title: 'Select games',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'games'}}],
+      name: 'aggregate_card',
+      title: 'Multi game fields',
+      type: 'aggregate_card',
       hidden: ({parent}) =>
         parent?.widget_type !== ComponentType.CAROUSEL &&
         parent?.widget_type !== ComponentType.AGGREGATE_CARD,

@@ -1,0 +1,37 @@
+{
+  allState(where: {state_name: {eq: "New Jersey"}}) {
+    state_name
+    state_code
+    lobby {
+      widget_env
+      widget {
+        widget_title
+        widget_type
+        games {
+          game_name
+          game_description
+          game_slug{
+            current
+          }
+          game_image{
+            asset{
+                url
+            }
+          }
+        }
+        game {
+          game_name
+          game_description
+          game_slug{
+            current
+          }
+          game_image{
+            asset{
+                url
+            }
+          }
+        }
+      }
+    }
+  }
+}

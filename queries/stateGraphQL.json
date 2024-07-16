@@ -1,0 +1,87 @@
+{
+  "data": {
+    "allState": [
+      {
+        "state_name": "New Jersey",
+        "state_code": "NJ",
+        "lobby": [
+          {
+            "widget_env": "stage",
+            "widget": {
+              "widget_title": "Game of the day",
+              "widget_type": "showcase-card",
+              "games": null,
+              "game": {
+                "game_name": "Game 1",
+                "game_description": "Friday at 9:00pm",
+                "game_slug": {
+                  "current": "game-1"
+                },
+                "game_image": {
+                  "asset": {
+                    "url": "https://cdn.sanity.io/images/roed4dp1/production/39971131100b28700a7775df4c76320b0324ef58-512x768.jpg"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "widget_env": "dev",
+            "widget": {
+              "widget_title": "Aggregated Daily Games",
+              "widget_type": "aggregate-card",
+              "games": [
+                {
+                  "game_name": "Game 1",
+                  "game_description": "Friday at 9:00pm",
+                  "game_slug": {
+                    "current": "game-1"
+                  },
+                  "game_image": {
+                    "asset": {
+                      "url": "https://cdn.sanity.io/images/roed4dp1/production/39971131100b28700a7775df4c76320b0324ef58-512x768.jpg"
+                    }
+                  }
+                },
+                {
+                  "game_name": "Game 2",
+                  "game_description": "Amazing prizes every evening!",
+                  "game_slug": {
+                    "current": "game-2"
+                  },
+                  "game_image": {
+                    "asset": {
+                      "url": "https://cdn.sanity.io/images/roed4dp1/production/39f7ab472dfb94e5f1eb9d797d9e05afab308e16-512x768.jpg"
+                    }
+                  }
+                }
+              ],
+              "game": null
+            }
+          },
+          {
+            "widget_env": "dev",
+            "widget": {
+              "widget_title": "FUNDS",
+              "widget_type": "account-balance",
+              "games": null,
+              "game": null
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "extensions": {
+    "sanitySyncTags": [
+      "s1:pRrohw",
+      "s1:9NSDPw",
+      "s1:bpKszA",
+      "s1:WK3kgg",
+      "s1:8Dx1aw",
+      "s1:yEEagg",
+      "s1:HyfdfQ",
+      "s1:viRpjA"
+    ]
+  }
+}

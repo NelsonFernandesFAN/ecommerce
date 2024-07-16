@@ -1,8 +1,7 @@
 import games from './games'
-import blockContent from './blockContent'
 import state from './state'
 import stateWidgets from './stateWidgets'
 import widget from './widget'
-import widgetsFields from './widgetsTypes/aggregateCard.js'
+import widgetsFields from './widgetsTypes/'
 
-export const schemaTypes = [state, widget, stateWidgets, games, blockContent, widgetsFields]
+export const schemaTypes = [state, widget, stateWidgets, games, ...widgetsFields]

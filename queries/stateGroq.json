@@ -1,0 +1,69 @@
+{
+  "query": "*[_type==\"state\"&&state_code==\"NJ\"]{\n\tstate_name,\n\tstate_code,\n\t\"lobby\": lobby[]{\n\t\twidget_env,\n\t\twidget->{\n\t\t\twidget_title,\n\t\t\twidget_type,\n\t\t\twidget_type=='showcase-card'=>{\n\t\t\t\tgame->{\n\t\t\t\t\tgame_name,\n\t\t\t\t\t\"game_slug\": game_slug.current,\n\t\t\t\t\tgame_description,\n\t\t\t\t\t\"game_image\": game_image.asset->url\n\t\t\t\t}\n\t\t\t},\n\t\t\twidget_type=='aggregate-card'||widget_type=='carousel'=>{\n\t\t\t\t\"games\": games[]->{\n\t\t\t\t\tgame_name,\n\t\t\t\t\tgame_slug,\n\t\t\t\t\tgame_description,\n\t\t\t\t\t\"image\": game_image.asset->url\n\t\t\t\t}\n\t\t\t},\n\t\t}\n\t}\n}",
+  "result": [
+    {
+      "state_name": "New Jersey",
+      "state_code": "NJ",
+      "lobby": [
+        {
+          "widget_env": "stage",
+          "widget": {
+            "widget_title": "Game of the day",
+            "widget_type": "showcase-card",
+            "game": {
+              "game_name": "Game 1",
+              "game_slug": "game-1",
+              "game_description": "Friday at 9:00pm",
+              "game_image": "https://cdn.sanity.io/images/roed4dp1/production/39971131100b28700a7775df4c76320b0324ef58-512x768.jpg"
+            }
+          }
+        },
+        {
+          "widget_env": "dev",
+          "widget": {
+            "widget_title": "Aggregated Daily Games",
+            "widget_type": "aggregate-card",
+            "games": [
+              {
+                "game_name": "Game 1",
+                "game_slug": {
+                  "current": "game-1",
+                  "_type": "slug"
+                },
+                "game_description": "Friday at 9:00pm",
+                "image": "https://cdn.sanity.io/images/roed4dp1/production/39971131100b28700a7775df4c76320b0324ef58-512x768.jpg"
+              },
+              {
+                "game_name": "Game 2",
+                "game_slug": {
+                  "current": "game-2",
+                  "_type": "slug"
+                },
+                "game_description": "Amazing prizes every evening!",
+                "image": "https://cdn.sanity.io/images/roed4dp1/production/39f7ab472dfb94e5f1eb9d797d9e05afab308e16-512x768.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "widget_env": "dev",
+          "widget": {
+            "widget_title": "FUNDS",
+            "widget_type": "account-balance"
+          }
+        }
+      ]
+    }
+  ],
+  "syncTags": [
+    "s1:8Dx1aw",
+    "s1:HyfdfQ",
+    "s1:pRrohw",
+    "s1:bpKszA",
+    "s1:WK3kgg",
+    "s1:9NSDPw",
+    "s1:viRpjA",
+    "s1:yEEagg"
+  ],
+  "ms": 15
+}

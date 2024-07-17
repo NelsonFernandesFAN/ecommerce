@@ -1,12 +1,7 @@
+import {ComponentType} from '@fanduel/nv-lottery-shared-types'
+
 import {defineField, defineType} from 'sanity'
 import {ProjectsIcon} from '@sanity/icons'
-
-export enum ComponentType {
-  SHOWCASE_CARD = 'showcase-card',
-  AGGREGATE_CARD = 'aggregate-card',
-  CAROUSEL = 'carousel',
-  ACCOUNT_BALANCE = 'account-balance',
-}
 
 export default defineType({
   name: 'widget',

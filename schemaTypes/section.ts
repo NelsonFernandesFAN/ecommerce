@@ -4,38 +4,36 @@ import {defineField, defineType} from 'sanity'
 import {ProjectsIcon} from '@sanity/icons'
 
 export default defineType({
-  name: 'widget',
-  title: 'Widgets',
+  name: 'section',
+  title: 'Section',
   type: 'document',
   icon: ProjectsIcon,
   fields: [
     defineField({
-      name: 'widget_title',
+      name: 'title',
       title: 'Title',
       type: 'string',
     }),
     defineField({
-      name: 'widget_type',
-      title: 'Widget Type',
+      name: 'type',
+      title: 'Type',
       type: 'string',
       options: {
         list: Object.values(ComponentType),
       },
     }),
     defineField({
-      name: 'game',
-      title: 'Select game',
+      name: 'draw',
+      title: 'Select draw game',
       type: 'reference',
-      to: {type: 'games'},
+      to: {type: 'draw'},
       hidden: ({parent}) => parent?.widget_type !== ComponentType.SHOWCASE_CARD,
     }),
     defineField({
-      name: 'aggregate_card',
-      title: 'Multi game fields',
-      type: 'aggregate_card',
-      hidden: ({parent}) =>
-        parent?.widget_type !== ComponentType.CAROUSEL &&
-        parent?.widget_type !== ComponentType.AGGREGATE_CARD,
+      name: 'draws',
+      title: 'Select draw games',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'draw'}}],
     }),
   ],
 })

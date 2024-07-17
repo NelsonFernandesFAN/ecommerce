@@ -1,19 +1,18 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'category',
-  title: 'Category',
-  type: 'document',
+  name: 'showcard_card',
+  title: 'Aggregate Fields',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
       type: 'string',
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+      name: 'games',
+      title: 'Select game',
+      type: 'games',
     }),
   ],
 })

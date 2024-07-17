@@ -10,10 +10,10 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'games',
+      name: 'draws',
       title: 'Select games',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'games'}}],
+      of: [{type: 'reference', to: {type: 'draw'}}],
     }),
   ],
 })

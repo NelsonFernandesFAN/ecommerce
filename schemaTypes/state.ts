@@ -1,5 +1,4 @@
 import {defineField, defineType} from 'sanity'
-import WidgetsInput from '../components/widgets-input/widgets-input'
 import {EarthAmericasIcon} from '@sanity/icons'
 
 export default defineType({
@@ -9,28 +8,26 @@ export default defineType({
   icon: EarthAmericasIcon,
   fields: [
     defineField({
-      name: 'state_name',
+      name: 'name',
       title: 'State Name',
       type: 'string',
     }),
     defineField({
-      name: 'state_code',
-      title: 'state_code',
+      name: 'code',
+      title: 'State Code',
       type: 'string',
     }),
     defineField({
-      name: 'lobby',
+      name: 'layout',
+      title: 'Layout',
       type: 'array',
-      of: [{type: 'stateWidgets'}],
-      components: {
-        input: WidgetsInput,
-      },
+      of: [{type: 'sectionWithStatus'}],
     }),
   ],
   preview: {
     select: {
-      title: 'state_name',
-      subtitle: 'state_code',
+      title: 'name',
+      subtitle: 'code',
     },
     prepare({title, subtitle}) {
       return {

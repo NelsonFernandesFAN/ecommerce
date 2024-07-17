@@ -15,7 +15,6 @@
 				}
 			},
 			widget_type=='aggregate-card'||widget_type=='carousel'=>{
-				"games": games[]->{
 					game_name,
 					game_slug,
 					game_description,

@@ -23,26 +23,28 @@
           "widget": {
             "widget_title": "Aggregated Daily Games",
             "widget_type": "aggregate-card",
-            "games": [
-              {
-                "game_name": "Game 1",
-                "game_slug": {
-                  "current": "game-1",
-                  "_type": "slug"
+            "aggregate_card": {
+              "games": [
+                {
+                  "game_name": "Game 1",
+                  "game_slug": {
+                    "current": "game-1",
+                    "_type": "slug"
+                  },
+                  "game_description": "Friday at 9:00pm",
+                  "image": "https://cdn.sanity.io/images/roed4dp1/production/39971131100b28700a7775df4c76320b0324ef58-512x768.jpg"
                 },
-                "game_description": "Friday at 9:00pm",
-                "image": "https://cdn.sanity.io/images/roed4dp1/production/39971131100b28700a7775df4c76320b0324ef58-512x768.jpg"
-              },
-              {
-                "game_name": "Game 2",
-                "game_slug": {
-                  "current": "game-2",
-                  "_type": "slug"
-                },
-                "game_description": "Amazing prizes every evening!",
-                "image": "https://cdn.sanity.io/images/roed4dp1/production/39f7ab472dfb94e5f1eb9d797d9e05afab308e16-512x768.jpg"
-              }
-            ]
+                {
+                  "game_name": "Game 2",
+                  "game_slug": {
+                    "current": "game-2",
+                    "_type": "slug"
+                  },
+                  "game_description": "Amazing prizes every evening!",
+                  "image": "https://cdn.sanity.io/images/roed4dp1/production/39f7ab472dfb94e5f1eb9d797d9e05afab308e16-512x768.jpg"
+                }
+              ]
+            }
           }
         },
         {

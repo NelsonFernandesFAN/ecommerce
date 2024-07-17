@@ -1,7 +1,6 @@
-import games from './games'
+import draw from './draw'
 import state from './state'
-import stateWidgets from './stateWidgets'
-import widget from './widget'
-import widgetsFields from './widgetsTypes/'
+import sectionWithStatus from './sectionWithStatus'
+import section from './section'
 
-export const schemaTypes = [state, widget, stateWidgets, games, ...widgetsFields]
+export const schemaTypes = [state, section, sectionWithStatus, draw]

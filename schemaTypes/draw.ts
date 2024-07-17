@@ -65,13 +65,13 @@ export default defineType({
     defineField({
       name: 'gameColor',
       title: 'Color',
-      type: 'string',
+      type: 'color',
       group: ['SEO'],
     }),
     defineField({
       name: 'drawDate',
       title: 'Draw Date',
-      type: 'string',
+      type: 'datetime',
       group: ['SEO'],
     }),
   ],

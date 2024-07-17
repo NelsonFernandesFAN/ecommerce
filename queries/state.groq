@@ -1,26 +1,27 @@
-*[_type=="state"&&state_code=="NJ"]{
-	state_name,
-	state_code,
-	"lobby": lobby[]{
-		widget_env,
-		widget->{
-			widget_title,
-			widget_type,
-			widget_type=='showcase-card'=>{
-				game->{
-					game_name,
-					"game_slug": game_slug.current,
-					game_description,
-					"game_image": game_image.asset->url
+*[_type=="state"&&code=="NJ"]{
+	name,
+	code,
+	"layout": layout[]{
+		status,
+		section->{
+			title,
+			type,
+			type =='showcase-card'=>{
+				draw->{
+					name,
+					"slug": game_slug.current,
+					description,
+					"image": featuredImage.asset->url
 				}
 			},
-			widget_type=='aggregate-card'||widget_type=='carousel'=>{
-					game_name,
-					game_slug,
-					game_description,
-					"image": game_image.asset->url
+			type=='aggregate-card'||type=='carousel'=>{
+				"draws" = draw[]->{
+					name,
+					slug,
+					description,
+					"image": featuredImage.asset->url
+				}
 				}
 			},
 		}
 	}
-}

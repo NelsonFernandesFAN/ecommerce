@@ -27,13 +27,15 @@ export default defineType({
       title: 'Select draw game',
       type: 'reference',
       to: {type: 'draw'},
-      hidden: ({parent}) => parent?.widget_type !== ComponentType.SHOWCASE_CARD,
+      hidden: ({parent}) => parent?.type !== ComponentType.SHOWCASE_CARD,
     }),
     defineField({
       name: 'draws',
       title: 'Select draw games',
       type: 'array',
       of: [{type: 'reference', to: {type: 'draw'}}],
+      hidden: ({parent}) =>
+        parent?.type !== ComponentType.AGGREGATE_CARD || parent?.type !== ComponentType.CAROUSEL,
     }),
   ],
 })

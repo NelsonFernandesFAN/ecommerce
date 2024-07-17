@@ -15,7 +15,6 @@ export default defineType({
     },
   ],
   icon: JoystickIcon,
-
   fields: [
     defineField({
       name: 'name',

@@ -35,7 +35,7 @@ export default defineType({
       type: 'array',
       of: [{type: 'reference', to: {type: 'draw'}}],
       hidden: ({parent}) =>
-        parent?.type !== ComponentType.AGGREGATE_CARD || parent?.type !== ComponentType.CAROUSEL,
+        parent?.type !== ComponentType.AGGREGATE_CARD && parent?.type !== ComponentType.CAROUSEL,
     }),
   ],
 })

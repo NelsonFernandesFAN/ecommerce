@@ -1,27 +1,39 @@
-*[_type=="state"&&code=="NJ"]{
+*[_type == "state" && code == "NJ"]{
 	name,
 	code,
 	"layout": layout[]{
 		status,
 		section->{
-			title,
-			type,
-			type =='showcase-card'=>{
-				draw->{
+    		title,
+      		type,
+      		type == 'showcase-card' => {
+          		draw->{
 					name,
-					"slug": game_slug.current,
+					"slug": slug.current,
 					description,
-					"image": featuredImage.asset->url
-				}
-			},
-			type=='aggregate-card'||type=='carousel'=>{
-				"draws" = draw[]->{
+					"image": featureImage.asset->url,
+					"logo": logo.asset->url,
+					price,
+					prize,
+					description,
+					"gameColor": gameColor.hex,
+					drawDate
+          		}
+      		},
+    		type == 'aggregate-card' || type == 'carousel' => {
+    			"draws": draws[]->{
 					name,
-					slug,
+					"slug": slug.current,
 					description,
-					"image": featuredImage.asset->url
-				}
-				}
-			},
-		}
-	}
+					"image": featureImage.asset->url,
+					"logo": logo.asset->url,
+					price,
+					prize,
+					description,
+					"gameColor": gameColor.hex,
+					drawDate
+          		}
+      		},
+    	}    
+  	}
+}

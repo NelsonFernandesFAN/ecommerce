@@ -10,9 +10,6 @@ export default defineType({
     {
       name: 'SEO',
     },
-    {
-      name: 'Provided',
-    },
   ],
   icon: JoystickIcon,
   fields: [
@@ -44,6 +41,12 @@ export default defineType({
       group: ['SEO'],
     }),
     defineField({
+      name: 'drawDate',
+      title: 'Draw Date',
+      type: 'datetime',
+      group: ['SEO'],
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'string',
@@ -65,12 +68,6 @@ export default defineType({
       name: 'gameColor',
       title: 'Color',
       type: 'color',
-      group: ['SEO'],
-    }),
-    defineField({
-      name: 'drawDate',
-      title: 'Draw Date',
-      type: 'datetime',
       group: ['SEO'],
     }),
   ],
